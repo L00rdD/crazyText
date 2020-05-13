@@ -97,10 +97,12 @@ class ViewController: UIViewController {
 extension ViewController: SuggestionViewDelegate {
     func suggestionView(_ suggestionView: SuggestionView, didSelectSuggestion suggestion: String) {
         if (textfield.text ?? "").filter{ $0 == " " }.count == 0 {
-            textfield.text = suggestion
+            textfield.text = "\(suggestion) "
+            textFieldDidChange(textfield)
             return
         }
         
-        textfield.text?.append(suggestion)
+        textfield.text?.append("\(suggestion) ")
+        textFieldDidChange(textfield)
     }
 }
