@@ -7,32 +7,7 @@
 //
 
 import UIKit
-
-struct TestTable: GramTable {
-    var id: String = UUID().uuidString
-    var previous: String
-    var current: String
-    var count: Int
-    var userWord: Bool
-    
-    init(id: String, previous: String, current: String, count: Int, userWord: Bool) {
-        self.id = id
-        self.previous = previous
-        self.current = current
-        self.userWord = userWord
-        self.count = count
-    }
-    
-    init(previous: String, current: String, count: Int, userWord: Bool) {
-        self.previous = previous
-        self.current = current
-        self.userWord = userWord
-        self.count = count
-    }
-    
-    func updateCount(value: Int) {
-    }
-}
+import CSV
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -41,15 +16,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        let res = DatabaseManager.instance.createTable(table: TestTable.self)
-        if res {
-            DatabaseManager.instance.insert(gram: TestTable(previous: "test", current: "poulet", count: 2, userWord: true))
-            var test = DatabaseManager.instance.read(table: TestTable.self)
-            print(test)
-            DatabaseManager.instance.delete(table: TestTable.self, whereColumn: .userWord, whereValue: 1)
-            test = DatabaseManager.instance.read(table: TestTable.self)
-            print(test)
+        guard let dataVersion = AppManager.instance.getPlistValue(withName: "dataset"),
+            let userDataVersion = AppManager.instance.getDefaultSetting(key: .datasetVersion, valueType: Int.self)
+        else {
+            AppManager.instance.setDefaultSetting(key: .needUpdate, value: true)
+            return true
         }
+        
+        if Int(dataVersion) ?? 0 > userDataVersion  {
+            AppManager.instance.setDefaultSetting(key: .needUpdate, value: true)
+        }
+        
         return true
     }
 

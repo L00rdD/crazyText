@@ -21,6 +21,12 @@ protocol GramTable {
     func updateCount(value: Int)
 }
 
+extension GramTable {
+    init(id: String, previous: String, current: String, count: Int, userWord: Bool) {
+        self.init(id: id, previous: previous, current: current, count: count, userWord: userWord)
+    }
+}
+
 enum GramColumn: String {
     case id
     case previous

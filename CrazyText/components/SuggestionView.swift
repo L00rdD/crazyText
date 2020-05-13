@@ -8,8 +8,13 @@
 
 import UIKit
 
+protocol SuggestionViewDelegate {
+    func suggestionView(_ suggestionView: SuggestionView, didSelectSuggestion suggestion: String)
+}
+
 class SuggestionView: UIView {
     var stackView: UIStackView!
+    var delegate: SuggestionViewDelegate?
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -19,6 +24,7 @@ class SuggestionView: UIView {
     private func initCustomView() {
         self.stackView = UIStackView(frame: .init(x: self.bounds.origin.x, y: self.bounds.origin.y, width: self.bounds.width, height: self.bounds.height))
         self.addSubview(stackView)
+        stackView.isUserInteractionEnabled = true
         self.stackView.distribution = .fillEqually
     }
     
@@ -26,10 +32,18 @@ class SuggestionView: UIView {
         let label = UILabel()
         label.text = suggestion
         label.textAlignment = .center
+        label.isUserInteractionEnabled = true
+        label.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(SuggestionView.didTouch(_:))))
         stackView.addArrangedSubview(label)
     }
     
+    @objc func didTouch(_ gesture: UITapGestureRecognizer) {
+        let label = gesture.view as? UILabel
+        delegate?.suggestionView(self, didSelectSuggestion: label?.text ?? "")
+    }
+    
     func add(suggestions: [String]) {
+        stackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
         suggestions.forEach { add(suggestion: $0) }
     }
     

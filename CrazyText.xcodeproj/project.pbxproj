@@ -12,7 +12,13 @@
 		7F010E88246AE714008D3DD1 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F010E87246AE714008D3DD1 /* DatabaseManager.swift */; };
 		7F010E8D246AEFF9008D3DD1 /* GramTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F010E8C246AEFF9008D3DD1 /* GramTable.swift */; };
 		7F010E8F246BE0A4008D3DD1 /* GramTableAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F010E8E246BE0A4008D3DD1 /* GramTableAdapter.swift */; };
-		7F010E91246BE1B7008D3DD1 /* data.csv in Resources */ = {isa = PBXBuildFile; fileRef = 7F010E90246BE1B7008D3DD1 /* data.csv */; };
+		7F010E96246C0127008D3DD1 /* dataset_default_1.csv in Resources */ = {isa = PBXBuildFile; fileRef = 7F010E92246C0127008D3DD1 /* dataset_default_1.csv */; };
+		7F010E97246C0127008D3DD1 /* dataset_default_4.csv in Resources */ = {isa = PBXBuildFile; fileRef = 7F010E93246C0127008D3DD1 /* dataset_default_4.csv */; };
+		7F010E98246C0127008D3DD1 /* dataset_default_2.csv in Resources */ = {isa = PBXBuildFile; fileRef = 7F010E94246C0127008D3DD1 /* dataset_default_2.csv */; };
+		7F010E99246C0127008D3DD1 /* dataset_default_3.csv in Resources */ = {isa = PBXBuildFile; fileRef = 7F010E95246C0127008D3DD1 /* dataset_default_3.csv */; };
+		7F010E9F246C0FDD008D3DD1 /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F010E9E246C0FDD008D3DD1 /* AppManager.swift */; };
+		7F010EA2246C1BF5008D3DD1 /* LoadDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F010EA1246C1BF5008D3DD1 /* LoadDataViewController.swift */; };
+		7F010EA4246C1D13008D3DD1 /* Gram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F010EA3246C1D13008D3DD1 /* Gram.swift */; };
 		7F975ABB24695ADC0050C98B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F975ABA24695ADC0050C98B /* AppDelegate.swift */; };
 		7F975ABD24695ADC0050C98B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F975ABC24695ADC0050C98B /* SceneDelegate.swift */; };
 		7F975ABF24695ADC0050C98B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F975ABE24695ADC0050C98B /* ViewController.swift */; };
@@ -53,7 +59,13 @@
 		7F010E87246AE714008D3DD1 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		7F010E8C246AEFF9008D3DD1 /* GramTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GramTable.swift; sourceTree = "<group>"; };
 		7F010E8E246BE0A4008D3DD1 /* GramTableAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GramTableAdapter.swift; sourceTree = "<group>"; };
-		7F010E90246BE1B7008D3DD1 /* data.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = data.csv; sourceTree = "<group>"; };
+		7F010E92246C0127008D3DD1 /* dataset_default_1.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dataset_default_1.csv; sourceTree = "<group>"; };
+		7F010E93246C0127008D3DD1 /* dataset_default_4.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dataset_default_4.csv; sourceTree = "<group>"; };
+		7F010E94246C0127008D3DD1 /* dataset_default_2.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dataset_default_2.csv; sourceTree = "<group>"; };
+		7F010E95246C0127008D3DD1 /* dataset_default_3.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dataset_default_3.csv; sourceTree = "<group>"; };
+		7F010E9E246C0FDD008D3DD1 /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
+		7F010EA1246C1BF5008D3DD1 /* LoadDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadDataViewController.swift; sourceTree = "<group>"; };
+		7F010EA3246C1D13008D3DD1 /* Gram.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gram.swift; sourceTree = "<group>"; };
 		7F975AB724695ADC0050C98B /* CrazyText.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrazyText.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F975ABA24695ADC0050C98B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7F975ABC24695ADC0050C98B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -112,7 +124,7 @@
 		7F010E86246AE5A3008D3DD1 /* ressources */ = {
 			isa = PBXGroup;
 			children = (
-				7F010E90246BE1B7008D3DD1 /* data.csv */,
+				7F010E9A246C0F19008D3DD1 /* default */,
 			);
 			path = ressources;
 			sourceTree = "<group>";
@@ -122,8 +134,37 @@
 			children = (
 				7F010E8C246AEFF9008D3DD1 /* GramTable.swift */,
 				7F010E8E246BE0A4008D3DD1 /* GramTableAdapter.swift */,
+				7F010EA3246C1D13008D3DD1 /* Gram.swift */,
 			);
 			path = models;
+			sourceTree = "<group>";
+		};
+		7F010E9A246C0F19008D3DD1 /* default */ = {
+			isa = PBXGroup;
+			children = (
+				7F010E92246C0127008D3DD1 /* dataset_default_1.csv */,
+				7F010E94246C0127008D3DD1 /* dataset_default_2.csv */,
+				7F010E95246C0127008D3DD1 /* dataset_default_3.csv */,
+				7F010E93246C0127008D3DD1 /* dataset_default_4.csv */,
+			);
+			path = default;
+			sourceTree = "<group>";
+		};
+		7F010E9B246C0FC3008D3DD1 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				7F010E9E246C0FDD008D3DD1 /* AppManager.swift */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
+		7F010EA0246C1BDC008D3DD1 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7F975ABE24695ADC0050C98B /* ViewController.swift */,
+				7F010EA1246C1BF5008D3DD1 /* LoadDataViewController.swift */,
+			);
+			path = controllers;
 			sourceTree = "<group>";
 		};
 		7F975AAE24695ADC0050C98B = {
@@ -151,13 +192,14 @@
 		7F975AB924695ADC0050C98B /* CrazyText */ = {
 			isa = PBXGroup;
 			children = (
+				7F010EA0246C1BDC008D3DD1 /* controllers */,
+				7F010E9B246C0FC3008D3DD1 /* utils */,
 				7F010E8B246AEFE3008D3DD1 /* models */,
 				7F010E86246AE5A3008D3DD1 /* ressources */,
 				7F010E85246AE595008D3DD1 /* database */,
 				7F975AEA246966120050C98B /* components */,
 				7F975ABA24695ADC0050C98B /* AppDelegate.swift */,
 				7F975ABC24695ADC0050C98B /* SceneDelegate.swift */,
-				7F975ABE24695ADC0050C98B /* ViewController.swift */,
 				7F975AC024695ADC0050C98B /* Main.storyboard */,
 				7F975AC324695ADE0050C98B /* Assets.xcassets */,
 				7F975AC524695ADE0050C98B /* LaunchScreen.storyboard */,
@@ -324,10 +366,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7F010E91246BE1B7008D3DD1 /* data.csv in Resources */,
+				7F010E98246C0127008D3DD1 /* dataset_default_2.csv in Resources */,
 				7F975AC724695ADE0050C98B /* LaunchScreen.storyboard in Resources */,
+				7F010E96246C0127008D3DD1 /* dataset_default_1.csv in Resources */,
+				7F010E99246C0127008D3DD1 /* dataset_default_3.csv in Resources */,
 				7F975AC424695ADE0050C98B /* Assets.xcassets in Resources */,
 				7F975AC224695ADC0050C98B /* Main.storyboard in Resources */,
+				7F010E97246C0127008D3DD1 /* dataset_default_4.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,7 +506,10 @@
 				7F010E8F246BE0A4008D3DD1 /* GramTableAdapter.swift in Sources */,
 				7F975ABB24695ADC0050C98B /* AppDelegate.swift in Sources */,
 				7F975AEC246966230050C98B /* SuggestionView.swift in Sources */,
+				7F010EA4246C1D13008D3DD1 /* Gram.swift in Sources */,
 				7F975ABD24695ADC0050C98B /* SceneDelegate.swift in Sources */,
+				7F010EA2246C1BF5008D3DD1 /* LoadDataViewController.swift in Sources */,
+				7F010E9F246C0FDD008D3DD1 /* AppManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

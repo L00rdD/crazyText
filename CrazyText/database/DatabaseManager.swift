@@ -77,15 +77,61 @@ class DatabaseManager {
             sqlite3_bind_int(insertStatement, 4, Int32(gram.count))
             sqlite3_bind_int(insertStatement, 5, Int32(gram.userWord ? 1 : 0))
         if sqlite3_step(insertStatement) == SQLITE_DONE {
-          print("\nSuccessfully inserted row.")
+          print("")
         } else {
-          print("\nCould not insert row.")
+          print("Could not insert row.")
         }
         } else {
-        print("\nINSERT statement is not prepared.")
+            print("INSERT statement is not prepared.")
         }
         // 5
         sqlite3_finalize(insertStatement)
+    }
+    
+    func find<T: GramTable>(text: String, from table: T.Type, column: GramColumn) -> [T] {
+        let queryStatementString = "SELECT * FROM \(T.self) WHERE UPPER(\(column)) like UPPER('\(text)%') ORDER BY COUNT desc LIMIT 4;"
+        var queryStatement: OpaquePointer? = nil
+        var grams: [T] = []
+        if sqlite3_prepare_v2(db, queryStatementString, -1, &queryStatement, nil) == SQLITE_OK {
+            while sqlite3_step(queryStatement) == SQLITE_ROW {
+                let id = String(describing: String(cString: sqlite3_column_text(queryStatement, 0)))
+                let previous = String(describing: String(cString: sqlite3_column_text(queryStatement, 1)))
+                let current = String(describing: String(cString: sqlite3_column_text(queryStatement, 2)))
+                let count = sqlite3_column_int(queryStatement, 3)
+                let userWord: Bool = sqlite3_column_int(queryStatement, 4) == 1
+                grams.append(.init(
+                    id: id,
+                    previous: previous,
+                    current: current,
+                    count: Int(count),
+                    userWord: userWord))
+            }
+        }
+        sqlite3_finalize(queryStatement)
+        return grams
+    }
+    
+    func find<T: GramTable>(text: String, from table: String, column: GramColumn, gramElement: T.Type) -> [T] {
+        let queryStatementString = "SELECT * FROM \(table) WHERE UPPER(\(column)) like UPPER('\(text)%') ORDER BY COUNT desc LIMIT 4;"
+        var queryStatement: OpaquePointer? = nil
+        var grams: [T] = []
+        if sqlite3_prepare_v2(db, queryStatementString, -1, &queryStatement, nil) == SQLITE_OK {
+            while sqlite3_step(queryStatement) == SQLITE_ROW {
+                let id = String(describing: String(cString: sqlite3_column_text(queryStatement, 0)))
+                let previous = String(describing: String(cString: sqlite3_column_text(queryStatement, 1)))
+                let current = String(describing: String(cString: sqlite3_column_text(queryStatement, 2)))
+                let count = sqlite3_column_int(queryStatement, 3)
+                let userWord: Bool = sqlite3_column_int(queryStatement, 4) == 1
+                grams.append(.init(
+                    id: id,
+                    previous: previous,
+                    current: current,
+                    count: Int(count),
+                    userWord: userWord))
+            }
+        }
+        sqlite3_finalize(queryStatement)
+        return grams
     }
     
     func update<T: GramTable>(table: T.Type, column: GramColumn, value: String, whereColumn: GramColumn, whereValue: String) {

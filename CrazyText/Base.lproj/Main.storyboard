@@ -37,5 +37,43 @@
             </objects>
             <point key="canvasLocation" x="139" y="138"/>
         </scene>
+        <!--Load Data View Controller-->
+        <scene sceneID="V6R-i2-Jcn">
+            <objects>
+                <viewController storyboardIdentifier="LoadDataViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="oMH-Rd-aXb" customClass="LoadDataViewController" customModule="CrazyText" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xeA-Kw-QVl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="3C5-Th-dkd">
+                                <rect key="frame" x="188.5" y="434.5" width="37" height="37"/>
+                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VvM-g2-J4U">
+                                <rect key="frame" x="8" y="491.5" width="398" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="VvM-g2-J4U" firstAttribute="centerX" secondItem="bYg-po-XyB" secondAttribute="centerX" id="0xp-0f-0rV"/>
+                            <constraint firstItem="VvM-g2-J4U" firstAttribute="top" secondItem="3C5-Th-dkd" secondAttribute="bottom" constant="20" id="3a0-0n-9t0"/>
+                            <constraint firstItem="VvM-g2-J4U" firstAttribute="leading" secondItem="bYg-po-XyB" secondAttribute="leading" constant="8" id="IJ9-sX-1qE"/>
+                            <constraint firstItem="3C5-Th-dkd" firstAttribute="centerX" secondItem="bYg-po-XyB" secondAttribute="centerX" id="Yvz-H5-HC4"/>
+                            <constraint firstItem="bYg-po-XyB" firstAttribute="trailing" secondItem="VvM-g2-J4U" secondAttribute="trailing" constant="8" id="aAe-yv-fkg"/>
+                            <constraint firstItem="3C5-Th-dkd" firstAttribute="centerY" secondItem="bYg-po-XyB" secondAttribute="centerY" id="pAG-ru-N7w"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bYg-po-XyB"/>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="3C5-Th-dkd" id="2sH-Rg-EK2"/>
+                        <outlet property="info" destination="VvM-g2-J4U" id="3IS-jZ-ySQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MLA-rd-jkD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="989.85507246376824" y="137.94642857142856"/>
+        </scene>
     </scenes>
 </document>
