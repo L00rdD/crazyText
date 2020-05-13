@@ -1,0 +1,4 @@
+${PODS_ROOT}/Target Support Files/Pods-CrazyText-CrazyTextUITests/Pods-CrazyText-CrazyTextUITests-frameworks.sh
+${BUILT_PRODUCTS_DIR}/CSV.swift/CSV.framework
+${BUILT_PRODUCTS_DIR}/CSVImporter/CSVImporter.framework
+${BUILT_PRODUCTS_DIR}/HandySwift/HandySwift.framework

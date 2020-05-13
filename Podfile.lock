@@ -1,0 +1,24 @@
+PODS:
+  - CSV.swift (2.1.0)
+  - CSVImporter (1.9.1):
+    - HandySwift (~> 2.5)
+  - HandySwift (2.8.0)
+
+DEPENDENCIES:
+  - CSV.swift (~> 2.1.0)
+  - CSVImporter (~> 1.7)
+
+SPEC REPOS:
+  trunk:
+    - CSV.swift
+    - CSVImporter
+    - HandySwift
+
+SPEC CHECKSUMS:
+  CSV.swift: a24fb11c17875523783fe963592762ff163ef8ea
+  CSVImporter: 1543192354ecf8abccd2cc77947d190fd9cf2b18
+  HandySwift: 0a32500215166a56a58f972f7ce1641361307e8b
+
+PODFILE CHECKSUM: 711555440219b4b226e5d253e429a2b09ce4dfbb
+
+COCOAPODS: 1.9.1

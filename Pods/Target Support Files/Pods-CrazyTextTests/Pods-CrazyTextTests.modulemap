@@ -1,0 +1,6 @@
+framework module Pods_CrazyTextTests {
+  umbrella header "Pods-CrazyTextTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

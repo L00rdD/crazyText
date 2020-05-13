@@ -3,10 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0639FBD10DD509E20F29E068 /* Pods_CrazyText_CrazyTextUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7419775B09817870DE4CE976 /* Pods_CrazyText_CrazyTextUITests.framework */; };
+		09695C57941F0D5264A237C4 /* Pods_CrazyText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 561E0F77A9D723C24E6A3B48 /* Pods_CrazyText.framework */; };
+		7F010E88246AE714008D3DD1 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F010E87246AE714008D3DD1 /* DatabaseManager.swift */; };
+		7F010E8D246AEFF9008D3DD1 /* GramTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F010E8C246AEFF9008D3DD1 /* GramTable.swift */; };
+		7F010E8F246BE0A4008D3DD1 /* GramTableAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F010E8E246BE0A4008D3DD1 /* GramTableAdapter.swift */; };
+		7F010E91246BE1B7008D3DD1 /* data.csv in Resources */ = {isa = PBXBuildFile; fileRef = 7F010E90246BE1B7008D3DD1 /* data.csv */; };
 		7F975ABB24695ADC0050C98B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F975ABA24695ADC0050C98B /* AppDelegate.swift */; };
 		7F975ABD24695ADC0050C98B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F975ABC24695ADC0050C98B /* SceneDelegate.swift */; };
 		7F975ABF24695ADC0050C98B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F975ABE24695ADC0050C98B /* ViewController.swift */; };
@@ -15,6 +21,8 @@
 		7F975AC724695ADE0050C98B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F975AC524695ADE0050C98B /* LaunchScreen.storyboard */; };
 		7F975AD224695ADE0050C98B /* CrazyTextTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F975AD124695ADE0050C98B /* CrazyTextTests.swift */; };
 		7F975ADD24695ADE0050C98B /* CrazyTextUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F975ADC24695ADE0050C98B /* CrazyTextUITests.swift */; };
+		7F975AEC246966230050C98B /* SuggestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F975AEB246966230050C98B /* SuggestionView.swift */; };
+		CF866EE872443370F4346F6F /* Pods_CrazyTextTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14ED018DE8CDAD09C18A6B0C /* Pods_CrazyTextTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +43,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0524C377D26CE4B089E2C622 /* Pods-CrazyText.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrazyText.debug.xcconfig"; path = "Target Support Files/Pods-CrazyText/Pods-CrazyText.debug.xcconfig"; sourceTree = "<group>"; };
+		09F5E8B7AD08F41292483BF6 /* Pods-CrazyTextTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrazyTextTests.debug.xcconfig"; path = "Target Support Files/Pods-CrazyTextTests/Pods-CrazyTextTests.debug.xcconfig"; sourceTree = "<group>"; };
+		14ED018DE8CDAD09C18A6B0C /* Pods_CrazyTextTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CrazyTextTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E7DA4EBEAD282D02D949A42 /* Pods-CrazyText-CrazyTextUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrazyText-CrazyTextUITests.debug.xcconfig"; path = "Target Support Files/Pods-CrazyText-CrazyTextUITests/Pods-CrazyText-CrazyTextUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		561E0F77A9D723C24E6A3B48 /* Pods_CrazyText.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CrazyText.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6169FE9F727DC567D218701F /* Pods-CrazyText.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrazyText.release.xcconfig"; path = "Target Support Files/Pods-CrazyText/Pods-CrazyText.release.xcconfig"; sourceTree = "<group>"; };
+		7419775B09817870DE4CE976 /* Pods_CrazyText_CrazyTextUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CrazyText_CrazyTextUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F010E87246AE714008D3DD1 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		7F010E8C246AEFF9008D3DD1 /* GramTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GramTable.swift; sourceTree = "<group>"; };
+		7F010E8E246BE0A4008D3DD1 /* GramTableAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GramTableAdapter.swift; sourceTree = "<group>"; };
+		7F010E90246BE1B7008D3DD1 /* data.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = data.csv; sourceTree = "<group>"; };
 		7F975AB724695ADC0050C98B /* CrazyText.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrazyText.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F975ABA24695ADC0050C98B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7F975ABC24695ADC0050C98B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +68,9 @@
 		7F975AD824695ADE0050C98B /* CrazyTextUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CrazyTextUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F975ADC24695ADE0050C98B /* CrazyTextUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrazyTextUITests.swift; sourceTree = "<group>"; };
 		7F975ADE24695ADE0050C98B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F975AEB246966230050C98B /* SuggestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionView.swift; sourceTree = "<group>"; };
+		A86517479720259FC81861CB /* Pods-CrazyTextTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrazyTextTests.release.xcconfig"; path = "Target Support Files/Pods-CrazyTextTests/Pods-CrazyTextTests.release.xcconfig"; sourceTree = "<group>"; };
+		D22DDCBF71181299180C446F /* Pods-CrazyText-CrazyTextUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrazyText-CrazyTextUITests.release.xcconfig"; path = "Target Support Files/Pods-CrazyText-CrazyTextUITests/Pods-CrazyText-CrazyTextUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09695C57941F0D5264A237C4 /* Pods_CrazyText.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF866EE872443370F4346F6F /* Pods_CrazyTextTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +94,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0639FBD10DD509E20F29E068 /* Pods_CrazyText_CrazyTextUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7F010E85246AE595008D3DD1 /* database */ = {
+			isa = PBXGroup;
+			children = (
+				7F010E87246AE714008D3DD1 /* DatabaseManager.swift */,
+			);
+			path = database;
+			sourceTree = "<group>";
+		};
+		7F010E86246AE5A3008D3DD1 /* ressources */ = {
+			isa = PBXGroup;
+			children = (
+				7F010E90246BE1B7008D3DD1 /* data.csv */,
+			);
+			path = ressources;
+			sourceTree = "<group>";
+		};
+		7F010E8B246AEFE3008D3DD1 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				7F010E8C246AEFF9008D3DD1 /* GramTable.swift */,
+				7F010E8E246BE0A4008D3DD1 /* GramTableAdapter.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
 		7F975AAE24695ADC0050C98B = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +133,8 @@
 				7F975AD024695ADE0050C98B /* CrazyTextTests */,
 				7F975ADB24695ADE0050C98B /* CrazyTextUITests */,
 				7F975AB824695ADC0050C98B /* Products */,
+				B1E954BD8FC65D8ED8A1A565 /* Pods */,
+				D1E2F8393615BDA7448869A5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +151,10 @@
 		7F975AB924695ADC0050C98B /* CrazyText */ = {
 			isa = PBXGroup;
 			children = (
+				7F010E8B246AEFE3008D3DD1 /* models */,
+				7F010E86246AE5A3008D3DD1 /* ressources */,
+				7F010E85246AE595008D3DD1 /* database */,
+				7F975AEA246966120050C98B /* components */,
 				7F975ABA24695ADC0050C98B /* AppDelegate.swift */,
 				7F975ABC24695ADC0050C98B /* SceneDelegate.swift */,
 				7F975ABE24695ADC0050C98B /* ViewController.swift */,
@@ -128,6 +184,37 @@
 			path = CrazyTextUITests;
 			sourceTree = "<group>";
 		};
+		7F975AEA246966120050C98B /* components */ = {
+			isa = PBXGroup;
+			children = (
+				7F975AEB246966230050C98B /* SuggestionView.swift */,
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
+		B1E954BD8FC65D8ED8A1A565 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0524C377D26CE4B089E2C622 /* Pods-CrazyText.debug.xcconfig */,
+				6169FE9F727DC567D218701F /* Pods-CrazyText.release.xcconfig */,
+				2E7DA4EBEAD282D02D949A42 /* Pods-CrazyText-CrazyTextUITests.debug.xcconfig */,
+				D22DDCBF71181299180C446F /* Pods-CrazyText-CrazyTextUITests.release.xcconfig */,
+				09F5E8B7AD08F41292483BF6 /* Pods-CrazyTextTests.debug.xcconfig */,
+				A86517479720259FC81861CB /* Pods-CrazyTextTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D1E2F8393615BDA7448869A5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				561E0F77A9D723C24E6A3B48 /* Pods_CrazyText.framework */,
+				7419775B09817870DE4CE976 /* Pods_CrazyText_CrazyTextUITests.framework */,
+				14ED018DE8CDAD09C18A6B0C /* Pods_CrazyTextTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +222,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7F975AE124695ADE0050C98B /* Build configuration list for PBXNativeTarget "CrazyText" */;
 			buildPhases = (
+				21F47FF7E7CD802429CDE4AD /* [CP] Check Pods Manifest.lock */,
 				7F975AB324695ADC0050C98B /* Sources */,
 				7F975AB424695ADC0050C98B /* Frameworks */,
 				7F975AB524695ADC0050C98B /* Resources */,
+				5BE2787F65CDD901BB279064 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,6 +241,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7F975AE424695ADE0050C98B /* Build configuration list for PBXNativeTarget "CrazyTextTests" */;
 			buildPhases = (
+				D2450CA4335A8BF87FEB1409 /* [CP] Check Pods Manifest.lock */,
 				7F975AC924695ADE0050C98B /* Sources */,
 				7F975ACA24695ADE0050C98B /* Frameworks */,
 				7F975ACB24695ADE0050C98B /* Resources */,
@@ -170,9 +260,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7F975AE724695ADE0050C98B /* Build configuration list for PBXNativeTarget "CrazyTextUITests" */;
 			buildPhases = (
+				A1B44E0D69B20B7ED874A01A /* [CP] Check Pods Manifest.lock */,
 				7F975AD424695ADE0050C98B /* Sources */,
 				7F975AD524695ADE0050C98B /* Frameworks */,
 				7F975AD624695ADE0050C98B /* Resources */,
+				8B4D1BBDCD9149CF3719BF63 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -232,6 +324,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F010E91246BE1B7008D3DD1 /* data.csv in Resources */,
 				7F975AC724695ADE0050C98B /* LaunchScreen.storyboard in Resources */,
 				7F975AC424695ADE0050C98B /* Assets.xcassets in Resources */,
 				7F975AC224695ADC0050C98B /* Main.storyboard in Resources */,
@@ -254,13 +347,120 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		21F47FF7E7CD802429CDE4AD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CrazyText-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5BE2787F65CDD901BB279064 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CrazyText/Pods-CrazyText-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CrazyText/Pods-CrazyText-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CrazyText/Pods-CrazyText-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8B4D1BBDCD9149CF3719BF63 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CrazyText-CrazyTextUITests/Pods-CrazyText-CrazyTextUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CrazyText-CrazyTextUITests/Pods-CrazyText-CrazyTextUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CrazyText-CrazyTextUITests/Pods-CrazyText-CrazyTextUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A1B44E0D69B20B7ED874A01A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CrazyText-CrazyTextUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D2450CA4335A8BF87FEB1409 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CrazyTextTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7F975AB324695ADC0050C98B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				7F975ABF24695ADC0050C98B /* ViewController.swift in Sources */,
+				7F010E88246AE714008D3DD1 /* DatabaseManager.swift in Sources */,
+				7F010E8D246AEFF9008D3DD1 /* GramTable.swift in Sources */,
+				7F010E8F246BE0A4008D3DD1 /* GramTableAdapter.swift in Sources */,
 				7F975ABB24695ADC0050C98B /* AppDelegate.swift in Sources */,
+				7F975AEC246966230050C98B /* SuggestionView.swift in Sources */,
 				7F975ABD24695ADC0050C98B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -432,6 +632,7 @@
 		};
 		7F975AE224695ADE0050C98B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0524C377D26CE4B089E2C622 /* Pods-CrazyText.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -449,6 +650,7 @@
 		};
 		7F975AE324695ADE0050C98B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6169FE9F727DC567D218701F /* Pods-CrazyText.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -466,6 +668,7 @@
 		};
 		7F975AE524695ADE0050C98B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 09F5E8B7AD08F41292483BF6 /* Pods-CrazyTextTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -487,6 +690,7 @@
 		};
 		7F975AE624695ADE0050C98B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A86517479720259FC81861CB /* Pods-CrazyTextTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -508,6 +712,7 @@
 		};
 		7F975AE824695ADE0050C98B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E7DA4EBEAD282D02D949A42 /* Pods-CrazyText-CrazyTextUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -527,6 +732,7 @@
 		};
 		7F975AE924695ADE0050C98B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D22DDCBF71181299180C446F /* Pods-CrazyText-CrazyTextUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
