@@ -28,6 +28,9 @@
 		7F975AD224695ADE0050C98B /* CrazyTextTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F975AD124695ADE0050C98B /* CrazyTextTests.swift */; };
 		7F975ADD24695ADE0050C98B /* CrazyTextUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F975ADC24695ADE0050C98B /* CrazyTextUITests.swift */; };
 		7F975AEC246966230050C98B /* SuggestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F975AEB246966230050C98B /* SuggestionView.swift */; };
+		7FA95D99246D305A002E366A /* SuggestionLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA95D98246D305A002E366A /* SuggestionLabel.swift */; };
+		7FA95D9C246D6D19002E366A /* SoundURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA95D9B246D6D19002E366A /* SoundURL.swift */; };
+		7FA95D9F246D7609002E366A /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA95D9E246D7609002E366A /* ChatTableViewCell.swift */; };
 		CF866EE872443370F4346F6F /* Pods_CrazyTextTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14ED018DE8CDAD09C18A6B0C /* Pods_CrazyTextTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +84,9 @@
 		7F975ADC24695ADE0050C98B /* CrazyTextUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrazyTextUITests.swift; sourceTree = "<group>"; };
 		7F975ADE24695ADE0050C98B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7F975AEB246966230050C98B /* SuggestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionView.swift; sourceTree = "<group>"; };
+		7FA95D98246D305A002E366A /* SuggestionLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionLabel.swift; sourceTree = "<group>"; };
+		7FA95D9B246D6D19002E366A /* SoundURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundURL.swift; sourceTree = "<group>"; };
+		7FA95D9E246D7609002E366A /* ChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
 		A86517479720259FC81861CB /* Pods-CrazyTextTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrazyTextTests.release.xcconfig"; path = "Target Support Files/Pods-CrazyTextTests/Pods-CrazyTextTests.release.xcconfig"; sourceTree = "<group>"; };
 		D22DDCBF71181299180C446F /* Pods-CrazyText-CrazyTextUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrazyText-CrazyTextUITests.release.xcconfig"; path = "Target Support Files/Pods-CrazyText-CrazyTextUITests/Pods-CrazyText-CrazyTextUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -192,6 +198,7 @@
 		7F975AB924695ADC0050C98B /* CrazyText */ = {
 			isa = PBXGroup;
 			children = (
+				7FA95D9D246D75F2002E366A /* cells */,
 				7F010EA0246C1BDC008D3DD1 /* controllers */,
 				7F010E9B246C0FC3008D3DD1 /* utils */,
 				7F010E8B246AEFE3008D3DD1 /* models */,
@@ -230,8 +237,18 @@
 			isa = PBXGroup;
 			children = (
 				7F975AEB246966230050C98B /* SuggestionView.swift */,
+				7FA95D98246D305A002E366A /* SuggestionLabel.swift */,
+				7FA95D9B246D6D19002E366A /* SoundURL.swift */,
 			);
 			path = components;
+			sourceTree = "<group>";
+		};
+		7FA95D9D246D75F2002E366A /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				7FA95D9E246D7609002E366A /* ChatTableViewCell.swift */,
+			);
+			path = cells;
 			sourceTree = "<group>";
 		};
 		B1E954BD8FC65D8ED8A1A565 /* Pods */ = {
@@ -505,10 +522,13 @@
 				7F010E8D246AEFF9008D3DD1 /* GramTable.swift in Sources */,
 				7F010E8F246BE0A4008D3DD1 /* GramTableAdapter.swift in Sources */,
 				7F975ABB24695ADC0050C98B /* AppDelegate.swift in Sources */,
+				7FA95D99246D305A002E366A /* SuggestionLabel.swift in Sources */,
 				7F975AEC246966230050C98B /* SuggestionView.swift in Sources */,
 				7F010EA4246C1D13008D3DD1 /* Gram.swift in Sources */,
 				7F975ABD24695ADC0050C98B /* SceneDelegate.swift in Sources */,
+				7FA95D9C246D6D19002E366A /* SoundURL.swift in Sources */,
 				7F010EA2246C1BF5008D3DD1 /* LoadDataViewController.swift in Sources */,
+				7FA95D9F246D7609002E366A /* ChatTableViewCell.swift in Sources */,
 				7F010E9F246C0FDD008D3DD1 /* AppManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

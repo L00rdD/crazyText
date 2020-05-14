@@ -88,6 +88,27 @@ class DatabaseManager {
         sqlite3_finalize(insertStatement)
     }
     
+    func insert<T: GramTable>(gramTable: String, gram: T) {
+        let insert = "INSERT INTO \(gramTable) (\(GramColumn.id), \(GramColumn.previous), \(GramColumn.current), \(GramColumn.count), \(GramColumn.userWord)) VALUES (?, ?, ?, ?, ?);"
+        var insertStatement: OpaquePointer?
+        if sqlite3_prepare_v2(db, insert, -1, &insertStatement, nil) == SQLITE_OK {
+            sqlite3_bind_text(insertStatement, 1, NSString(string: gram.id).utf8String, -1, nil)
+            sqlite3_bind_text(insertStatement, 2, NSString(string: gram.previous).utf8String, -1, nil)
+            sqlite3_bind_text(insertStatement, 3, NSString(string: gram.current).utf8String, -1, nil)
+            sqlite3_bind_int(insertStatement, 4, Int32(gram.count))
+            sqlite3_bind_int(insertStatement, 5, Int32(gram.userWord ? 1 : 0))
+        if sqlite3_step(insertStatement) == SQLITE_DONE {
+          print("")
+        } else {
+          print("Could not insert row.")
+        }
+        } else {
+            print("INSERT statement is not prepared.")
+        }
+        // 5
+        sqlite3_finalize(insertStatement)
+    }
+    
     func find<T: GramTable>(text: String, from table: T.Type, column: GramColumn) -> [T] {
         let queryStatementString = "SELECT * FROM \(T.self) WHERE UPPER(\(column)) like UPPER('\(text)%') ORDER BY COUNT desc LIMIT 4;"
         var queryStatement: OpaquePointer? = nil
@@ -134,8 +155,31 @@ class DatabaseManager {
         return grams
     }
     
+    func findBy2elements<T: GramTable>(text: String, andText: String, from table: String, column: GramColumn, gramElement: T.Type, andcolumn: GramColumn) -> [T] {
+        let queryStatementString = "SELECT * FROM \(table) WHERE UPPER(\(column)) like UPPER('\(text)%')AND UPPER(\(andcolumn)) like UPPER('\(andText)%') ORDER BY COUNT desc LIMIT 4;"
+        var queryStatement: OpaquePointer? = nil
+        var grams: [T] = []
+        if sqlite3_prepare_v2(db, queryStatementString, -1, &queryStatement, nil) == SQLITE_OK {
+            while sqlite3_step(queryStatement) == SQLITE_ROW {
+                let id = String(describing: String(cString: sqlite3_column_text(queryStatement, 0)))
+                let previous = String(describing: String(cString: sqlite3_column_text(queryStatement, 1)))
+                let current = String(describing: String(cString: sqlite3_column_text(queryStatement, 2)))
+                let count = sqlite3_column_int(queryStatement, 3)
+                let userWord: Bool = sqlite3_column_int(queryStatement, 4) == 1
+                grams.append(.init(
+                    id: id,
+                    previous: previous,
+                    current: current,
+                    count: Int(count),
+                    userWord: userWord))
+            }
+        }
+        sqlite3_finalize(queryStatement)
+        return grams
+    }
+    
     func update<T: GramTable>(table: T.Type, column: GramColumn, value: String, whereColumn: GramColumn, whereValue: String) {
-        let update = "UPDATE \(T.self) SET \(column.rawValue) = '\(value)' WHERE \(whereValue) = \(whereValue);"
+        let update = "UPDATE \(T.self) SET \(column.rawValue) = '\(value)' WHERE \(whereColumn) = \(whereValue);"
         var updateStatement: OpaquePointer?
         if sqlite3_prepare_v2(db, update, -1, &updateStatement, nil) ==
           SQLITE_OK {
@@ -148,6 +192,50 @@ class DatabaseManager {
         print("\nUPDATE statement is not prepared")
         }
         sqlite3_finalize(updateStatement)
+    }
+    
+    func update(table: String, column: GramColumn, value: String, whereColumn: GramColumn, whereValue: String) {
+        let update = "UPDATE \(table) SET \(column.rawValue) = '\(value)' WHERE \(whereColumn) = \(whereValue);"
+        var updateStatement: OpaquePointer?
+        if sqlite3_prepare_v2(db, update, -1, &updateStatement, nil) ==
+          SQLITE_OK {
+        if sqlite3_step(updateStatement) == SQLITE_DONE {
+          print("\nSuccessfully updated row.")
+        } else {
+          print("\nCould not update row.")
+        }
+        } else {
+        print("\nUPDATE statement is not prepared")
+        }
+        sqlite3_finalize(updateStatement)
+    }
+    
+    func update(table: String, column: GramColumn, value: Int, whereColumn: GramColumn, whereValue: String) {
+        let update = "UPDATE \(table) SET \(column.rawValue) = \(value) WHERE \(whereColumn) = '\(whereValue)';"
+        var updateStatement: OpaquePointer?
+        if sqlite3_prepare_v2(db, update, -1, &updateStatement, nil) ==
+          SQLITE_OK {
+        if sqlite3_step(updateStatement) == SQLITE_DONE {
+          print("\nSuccessfully updated row.")
+        } else {
+          print("\nCould not update row.")
+        }
+        } else {
+        print("\nUPDATE statement is not prepared")
+        }
+        sqlite3_finalize(updateStatement)
+    }
+    
+    func insertOrUpdateCorpus(table: String, previous: String, current: String) {
+        guard let gram = findBy2elements(text: previous, andText: current, from: table, column: .previous, gramElement: Gram1.self, andcolumn: .current).first else {
+            insert(gramTable: table, gram: Gram1(id: UUID().uuidString,
+                                                 previous: previous,
+                                                 current: current,
+                                                 count: 1,
+                                                 userWord: true))
+            return
+        }
+        update(table: table, column: .count, value: (gram.count + 1), whereColumn: .id, whereValue: gram.id)
     }
     
     func delete<T: GramTable>(table: T.Type, whereColumn: GramColumn, whereValue: String) {

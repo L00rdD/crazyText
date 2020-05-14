@@ -8,8 +8,15 @@
 
 import UIKit
 
+struct SuggestionWord {
+    var id: String
+    var word: String
+    var count: Int
+    var gramLevel: Int
+}
+
 protocol SuggestionViewDelegate {
-    func suggestionView(_ suggestionView: SuggestionView, didSelectSuggestion suggestion: String)
+    func suggestionView(_ suggestionView: SuggestionView, didSelectSuggestion suggestion: SuggestionWord)
 }
 
 class SuggestionView: UIView {
@@ -28,21 +35,26 @@ class SuggestionView: UIView {
         self.stackView.distribution = .fillEqually
     }
     
-    func add(suggestion: String) {
-        let label = UILabel()
-        label.text = suggestion
+    func add(suggestion: SuggestionWord) {
+        let label = SuggestionLabel()
+        label.text = suggestion.word
+        label.suggestionWord = suggestion
         label.textAlignment = .center
         label.isUserInteractionEnabled = true
+        label.layer.borderWidth = 0.5
+        label.layer.borderColor = UIColor.gray.cgColor
         label.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(SuggestionView.didTouch(_:))))
         stackView.addArrangedSubview(label)
     }
     
     @objc func didTouch(_ gesture: UITapGestureRecognizer) {
-        let label = gesture.view as? UILabel
-        delegate?.suggestionView(self, didSelectSuggestion: label?.text ?? "")
+        let label = gesture.view as? SuggestionLabel
+        delegate?.suggestionView(self, didSelectSuggestion: label?.suggestionWord ?? .init(id: "", word: "", count: 0, gramLevel: 1))
     }
     
-    func add(suggestions: [String]) {
+    func add(suggestions: [SuggestionWord]) {
+        stackView.layer.borderWidth = 0.5
+        stackView.layer.borderColor = UIColor.gray.cgColor
         stackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
         suggestions.forEach { add(suggestion: $0) }
     }

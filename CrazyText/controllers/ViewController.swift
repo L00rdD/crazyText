@@ -12,10 +12,21 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var textfield: UITextField!
     private var suggestView: SuggestionView?
+    @IBOutlet weak var chat: UITableView!
+    
+    private var messages = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         textfield.autocorrectionType = .no
+        textfield.delegate = self
+        
+        chat.delegate = self
+        chat.dataSource = self
+        chat.backgroundColor = UIColor(white: 0.95, alpha: 1)
+        chat.register(ChatTableViewCell.self, forCellReuseIdentifier: "chat")
+        
+        
         NotificationCenter.default.addObserver(self, selector: #selector(ViewController.keyboardWillShow(notification:)), name: UIResponder.keyboardDidShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(ViewController.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
         textfield.addTarget(self, action: #selector(ViewController.textFieldDidChange(_:)), for: .editingChanged)
@@ -30,21 +41,52 @@ class ViewController: UIViewController {
         }
     }
 
+    private func initSuggestView(keyboardHeight: CGFloat) {
+        let viewSize: CGFloat = 40
+        let y = self.view.frame.height - viewSize - textfield.frame.height
+        self.suggestView = SuggestionView(frame: .init(x: 0, y: y, width: self.view.frame.width, height: viewSize))
+        suggestView?.backgroundColor = .white
+        self.suggestView?.delegate = self
+        self.suggestView?.tag = 1
+    }
+
+    func addUSerEntries(text: String, level: Int) {
+        if level < 1 { return }
+        let split = text.split(separator: " ")
+        let previous = split.prefix(level - 1 < 1 ? 1 : level - 1).joined(separator: " ")
+        let current: String = String(split.last ?? "")
+        
+        DatabaseManager.default.insertOrUpdateCorpus(table: "Gram\(level - 1 < 1 ? 1 : level - 1)", previous: previous, current: current)
+    }
+    
+    func getGram(text: String, count: Int) -> (grams: [GramTable], level: Int) {
+        for i in stride(from: count,through: 0,by: -1) {
+            let search = text.split(separator: " ")
+                .suffix(count > 4 ? 4 : count).joined(separator: " ")
+            
+            let grams = DatabaseManager.default.find(text: search, from: "Gram\(i)", column: .previous, gramElement: Gram1.self)
+            
+            if !grams.isEmpty {
+                print(grams)
+                return (grams, i)
+            }
+        }
+        
+        return ([], 0)
+    }
+}
+
+extension ViewController: UITextFieldDelegate {
     @objc func keyboardWillShow(notification: Notification) {
         if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y == 0 {
+                self.view.frame.origin.y -= keyboardSize.height
+            }
             initSuggestView(keyboardHeight: keyboardSize.height)
             self.view.addSubview(suggestView!)
         }
     }
     
-    private func initSuggestView(keyboardHeight: CGFloat) {
-        let viewSize: CGFloat = 40
-        let y = self.view.frame.height - keyboardHeight - viewSize
-        self.suggestView = SuggestionView(frame: .init(x: 0, y: y, width: self.view.frame.width, height: viewSize))
-        self.suggestView?.delegate = self
-        self.suggestView?.tag = 1
-    }
-
     @objc func keyboardWillHide(notification: Notification) {
         if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
             self.suggestView = nil
@@ -64,45 +106,74 @@ class ViewController: UIViewController {
             .suffix(totalWords + 1 > 4 ? 4 : totalWords + 1).joined(separator: " ")
         
         var grams = [GramTable]()
+        var level: Int
         
         if totalWords == 0 {
             grams = db.find(text: search, from: Gram1.self, column: .previous)
-            suggestView?.add(suggestions: grams.map({ $0.previous }))
-            return 
+            suggestView?.add(suggestions: grams.map({ SuggestionWord(id: $0.id,
+                                                                     word: $0.previous,
+                                                                     count: $0.count,
+                                                                     gramLevel: 1) }))
+            return
         }
         
-        grams = getGram(text: search, count: totalWords > 4 ? 4 : totalWords)
+        addUSerEntries(text: search, level: totalWords)
+        (grams, level) = getGram(text: search, count: totalWords > 4 ? 4 : totalWords)
         
-        suggestView?.add(suggestions: grams.map({ $0.current }))
+        suggestView?.add(suggestions: grams.map({ SuggestionWord(id: $0.id,
+                                                                 word: $0.current,
+                                                                 count: $0.count,
+                                                                 gramLevel: level) }))
     }
     
-    func getGram(text: String, count: Int) -> [GramTable] {
-        for i in stride(from: count,through: 0,by: -1) {
-            let search = text.split(separator: " ")
-                .suffix(count > 4 ? 4 : count).joined(separator: " ")
-            
-            let grams = DatabaseManager.default.find(text: search, from: "Gram\(i)", column: .previous, gramElement: Gram1.self)
-            
-            if !grams.isEmpty {
-                print(grams)
-                return grams
-            }
-        }
-        
-        return []
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        messages.append(textfield.text ?? "")
+        chat.reloadData()
+        textfield.resignFirstResponder()
+        textField.text = ""
+        return true
     }
 }
 
 
 extension ViewController: SuggestionViewDelegate {
-    func suggestionView(_ suggestionView: SuggestionView, didSelectSuggestion suggestion: String) {
-        if (textfield.text ?? "").filter{ $0 == " " }.count == 0 {
-            textfield.text = "\(suggestion) "
-            textFieldDidChange(textfield)
+    func suggestionView(_ suggestionView: SuggestionView, didSelectSuggestion suggestion: SuggestionWord) {
+        if (textfield.text ?? "").filter({ $0 == " " }).count == 0 {
+            update(textfield: textfield, with: suggestion, replace: true)
             return
         }
         
-        textfield.text?.append("\(suggestion) ")
+        update(textfield: textfield, with: suggestion, replace: false)
+    }
+    
+    private func update(textfield: UITextField, with suggestion: SuggestionWord, replace: Bool) {
+        if replace {
+            textfield.text = "\(suggestion.word) "
+        } else {
+            textfield.text?.append("\(suggestion.word) ")
+        }
+        
+        DatabaseManager.default.update(table: "Gram\(suggestion.gramLevel)",
+            column: .count,
+            value: (suggestion.count + 1),
+            whereColumn: .id,
+            whereValue: suggestion.id)
         textFieldDidChange(textfield)
+    }
+}
+
+extension ViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return messages.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell =  tableView.dequeueReusableCell(withIdentifier: "chat", for: indexPath) as? ChatTableViewCell else {
+            return .init()
+        }
+        
+        cell.set(message: messages[indexPath.row], incoming: indexPath.row % 2 == 0)
+        
+        return cell
     }
 }
