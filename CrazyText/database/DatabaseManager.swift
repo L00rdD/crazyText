@@ -44,6 +44,19 @@ class DatabaseManager {
         return done
     }
     
+    func createKamelottTable() {
+        let createTableString = "CREATE TABLE IF NOT EXISTS Kamelott (title VARCHAR(200) PRIMARY KEY,words VARCHAR(200));"
+        var createTableStatement: OpaquePointer? = nil
+        if sqlite3_prepare_v2(db, createTableString, -1, &createTableStatement, nil) == SQLITE_OK
+        {
+            if sqlite3_step(createTableStatement) == SQLITE_DONE {
+                print("kamelott table created")
+            }
+        } else {
+        }
+        sqlite3_finalize(createTableStatement)
+    }
+    
     func read<T: GramTable>(table: T.Type) -> [T] {
         let queryStatementString = "SELECT * FROM \(T.self);"
         var queryStatement: OpaquePointer? = nil

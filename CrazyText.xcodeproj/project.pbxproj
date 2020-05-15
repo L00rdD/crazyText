@@ -52,6 +52,16 @@
 		7FA961FB246E86BD002E366A /* dataset_default_2.csv in Resources */ = {isa = PBXBuildFile; fileRef = 7FA961F7246E86BD002E366A /* dataset_default_2.csv */; };
 		7FA961FC246E86BD002E366A /* dataset_default_3.csv in Resources */ = {isa = PBXBuildFile; fileRef = 7FA961F8246E86BD002E366A /* dataset_default_3.csv */; };
 		7FA961FD246E86BD002E366A /* dataset_default_4.csv in Resources */ = {isa = PBXBuildFile; fileRef = 7FA961F9246E86BD002E366A /* dataset_default_4.csv */; };
+		7FA96209246E9099002E366A /* marre.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7FA96201246E9098002E366A /* marre.mp3 */; };
+		7FA9620A246E9099002E366A /* tapaucul.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7FA96202246E9098002E366A /* tapaucul.mp3 */; };
+		7FA9620B246E9099002E366A /* porte.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7FA96203246E9099002E366A /* porte.mp3 */; };
+		7FA9620C246E9099002E366A /* manger.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7FA96204246E9099002E366A /* manger.mp3 */; };
+		7FA9620D246E9099002E366A /* laguerre.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7FA96205246E9099002E366A /* laguerre.mp3 */; };
+		7FA9620E246E9099002E366A /* reseau.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7FA96206246E9099002E366A /* reseau.mp3 */; };
+		7FA9620F246E9099002E366A /* hello.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7FA96207246E9099002E366A /* hello.mp3 */; };
+		7FA96210246E9099002E366A /* tactique.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7FA96208246E9099002E366A /* tactique.mp3 */; };
+		7FA96212246E90A7002E366A /* companie.csv in Resources */ = {isa = PBXBuildFile; fileRef = 7FA96211246E90A7002E366A /* companie.csv */; };
+		7FA96214246E90D1002E366A /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA96213246E90D1002E366A /* Company.swift */; };
 		CF866EE872443370F4346F6F /* Pods_CrazyTextTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14ED018DE8CDAD09C18A6B0C /* Pods_CrazyTextTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -129,6 +139,16 @@
 		7FA961F7246E86BD002E366A /* dataset_default_2.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = dataset_default_2.csv; path = ../../../../../../Desktop/datasetes/dataset_default_2.csv; sourceTree = "<group>"; };
 		7FA961F8246E86BD002E366A /* dataset_default_3.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = dataset_default_3.csv; path = ../../../../../../Desktop/datasetes/dataset_default_3.csv; sourceTree = "<group>"; };
 		7FA961F9246E86BD002E366A /* dataset_default_4.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = dataset_default_4.csv; path = ../../../../../../Desktop/datasetes/dataset_default_4.csv; sourceTree = "<group>"; };
+		7FA96201246E9098002E366A /* marre.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = marre.mp3; sourceTree = "<group>"; };
+		7FA96202246E9098002E366A /* tapaucul.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = tapaucul.mp3; sourceTree = "<group>"; };
+		7FA96203246E9099002E366A /* porte.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = porte.mp3; sourceTree = "<group>"; };
+		7FA96204246E9099002E366A /* manger.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = manger.mp3; sourceTree = "<group>"; };
+		7FA96205246E9099002E366A /* laguerre.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = laguerre.mp3; sourceTree = "<group>"; };
+		7FA96206246E9099002E366A /* reseau.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = reseau.mp3; sourceTree = "<group>"; };
+		7FA96207246E9099002E366A /* hello.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = hello.mp3; sourceTree = "<group>"; };
+		7FA96208246E9099002E366A /* tactique.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = tactique.mp3; sourceTree = "<group>"; };
+		7FA96211246E90A7002E366A /* companie.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = companie.csv; sourceTree = "<group>"; };
+		7FA96213246E90D1002E366A /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
 		A86517479720259FC81861CB /* Pods-CrazyTextTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrazyTextTests.release.xcconfig"; path = "Target Support Files/Pods-CrazyTextTests/Pods-CrazyTextTests.release.xcconfig"; sourceTree = "<group>"; };
 		D22DDCBF71181299180C446F /* Pods-CrazyText-CrazyTextUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrazyText-CrazyTextUITests.release.xcconfig"; path = "Target Support Files/Pods-CrazyText-CrazyTextUITests/Pods-CrazyText-CrazyTextUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -172,6 +192,7 @@
 		7F010E86246AE5A3008D3DD1 /* ressources */ = {
 			isa = PBXGroup;
 			children = (
+				7FA961FF246E9079002E366A /* companie */,
 				7FA95DA0246D8B33002E366A /* kamelott */,
 				7F010E9A246C0F19008D3DD1 /* default */,
 			);
@@ -186,6 +207,7 @@
 				7F010EA3246C1D13008D3DD1 /* Gram.swift */,
 				7FA95E94246D9902002E366A /* CrazyMode.swift */,
 				7FA95E98246DF622002E366A /* Kamelott.swift */,
+				7FA96213246E90D1002E366A /* Company.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -330,6 +352,30 @@
 			path = sounds;
 			sourceTree = "<group>";
 		};
+		7FA961FF246E9079002E366A /* companie */ = {
+			isa = PBXGroup;
+			children = (
+				7FA96211246E90A7002E366A /* companie.csv */,
+				7FA96200246E9089002E366A /* sounds */,
+			);
+			path = companie;
+			sourceTree = "<group>";
+		};
+		7FA96200246E9089002E366A /* sounds */ = {
+			isa = PBXGroup;
+			children = (
+				7FA96207246E9099002E366A /* hello.mp3 */,
+				7FA96205246E9099002E366A /* laguerre.mp3 */,
+				7FA96204246E9099002E366A /* manger.mp3 */,
+				7FA96201246E9098002E366A /* marre.mp3 */,
+				7FA96203246E9099002E366A /* porte.mp3 */,
+				7FA96206246E9099002E366A /* reseau.mp3 */,
+				7FA96208246E9099002E366A /* tactique.mp3 */,
+				7FA96202246E9098002E366A /* tapaucul.mp3 */,
+			);
+			path = sounds;
+			sourceTree = "<group>";
+		};
 		B1E954BD8FC65D8ED8A1A565 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -462,6 +508,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FA96209246E9099002E366A /* marre.mp3 in Resources */,
 				7FA961C3246E0050002E366A /* cest_honteux.mp3 in Resources */,
 				7FA961D9246E00EA002E366A /* ni_vu_ni_connu.mp3 in Resources */,
 				7F975AC724695ADE0050C98B /* LaunchScreen.storyboard in Resources */,
@@ -475,18 +522,26 @@
 				7F975AC424695ADE0050C98B /* Assets.xcassets in Resources */,
 				7FA961D1246E00BA002E366A /* comment.mp3 in Resources */,
 				7FA961D5246E00DA002E366A /* fumier.mp3 in Resources */,
+				7FA9620E246E9099002E366A /* reseau.mp3 in Resources */,
+				7FA9620C246E9099002E366A /* manger.mp3 in Resources */,
+				7FA96212246E90A7002E366A /* companie.csv in Resources */,
 				7FA961CD246E009C002E366A /* ca_me_fait_gerber.mp3 in Resources */,
 				7F975AC224695ADC0050C98B /* Main.storyboard in Resources */,
 				7FA961C9246E007A002E366A /* et_vous_bande_de_cons.mp3 in Resources */,
 				7FA961CB246E0090002E366A /* boule-de-feu-boule-de-feu.mp3 in Resources */,
 				7FA95E91246D8C98002E366A /* kam.csv in Resources */,
 				7FA961C1246E002D002E366A /* bucher3.mp3 in Resources */,
+				7FA9620D246E9099002E366A /* laguerre.mp3 in Resources */,
 				7FA961D7246E00E2002E366A /* meteo.mp3 in Resources */,
+				7FA9620B246E9099002E366A /* porte.mp3 in Resources */,
 				7FA961ED246E85C3002E366A /* a_la_volette1.mp3 in Resources */,
 				7FA961FB246E86BD002E366A /* dataset_default_2.csv in Resources */,
+				7FA9620F246E9099002E366A /* hello.mp3 in Resources */,
 				7FA961CF246E00AE002E366A /* casuffit.mp3 in Resources */,
 				7FA961DB246E00F5002E366A /* on_en_a_gros.mp3 in Resources */,
 				7FA961FD246E86BD002E366A /* dataset_default_4.csv in Resources */,
+				7FA96210246E9099002E366A /* tactique.mp3 in Resources */,
+				7FA9620A246E9099002E366A /* tapaucul.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -626,6 +681,7 @@
 				7F975ABD24695ADC0050C98B /* SceneDelegate.swift in Sources */,
 				7FA95E99246DF622002E366A /* Kamelott.swift in Sources */,
 				7FA95D9C246D6D19002E366A /* SoundURL.swift in Sources */,
+				7FA96214246E90D1002E366A /* Company.swift in Sources */,
 				7F010EA2246C1BF5008D3DD1 /* LoadDataViewController.swift in Sources */,
 				7FA95E93246D94C7002E366A /* ModeViewController.swift in Sources */,
 				7FA95D9F246D7609002E366A /* ChatTableViewCell.swift in Sources */,

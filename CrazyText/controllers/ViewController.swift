@@ -204,6 +204,11 @@ extension ViewController: ModeViewControllerDelegate {
         case .none:
             self.mode = nil
             self.chat.backgroundView = UIView()
+        case .company:
+            self.mode = CompanyCrazyMode()
+            let imageView = UIImageView(image: .init(imageLiteralResourceName: "company"))
+            imageView.contentMode = .scaleAspectFit
+            self.chat.backgroundView = imageView
         }
     }
 }

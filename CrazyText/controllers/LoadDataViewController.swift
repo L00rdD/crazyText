@@ -25,8 +25,6 @@ class LoadDataViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         setCorpus()
-        singer.isUserInteractionEnabled = true
-        singer.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(sing)))
         let dataset = Int(AppManager.instance.getPlistValue(withName: "dataset") ?? "0")
         AppManager.instance.setDefaultSetting(key: .datasetVersion, value: dataset)
         AppManager.instance.setDefaultSetting(key: .needUpdate, value: false)

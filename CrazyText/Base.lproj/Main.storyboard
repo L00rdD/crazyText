@@ -139,7 +139,7 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="soon" translatesAutoresizingMaskIntoConstraints="NO" id="7RK-Hl-nSA">
                                 <rect key="frame" x="294" y="364" width="100" height="100"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="soon" translatesAutoresizingMaskIntoConstraints="NO" id="il2-WF-jrV">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="company" translatesAutoresizingMaskIntoConstraints="NO" id="il2-WF-jrV">
                                 <rect key="frame" x="294" y="84" width="100" height="100"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="none" translatesAutoresizingMaskIntoConstraints="NO" id="yWB-Vh-U9j">
@@ -182,6 +182,7 @@
                         <viewLayoutGuide key="safeArea" id="N1d-Ml-6aQ"/>
                     </view>
                     <connections>
+                        <outlet property="companyMode" destination="il2-WF-jrV" id="d8o-aH-N9A"/>
                         <outlet property="kamelottMode" destination="eIb-Tb-tC1" id="vFY-HJ-wFP"/>
                         <outlet property="none" destination="yWB-Vh-U9j" id="Vep-vk-77D"/>
                     </connections>
@@ -192,6 +193,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="company" width="564" height="780"/>
         <image name="kam" width="516" height="516"/>
         <image name="none" width="250" height="250"/>
         <image name="singer" width="597" height="438"/>
