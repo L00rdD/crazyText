@@ -12,10 +12,6 @@
 		7F010E88246AE714008D3DD1 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F010E87246AE714008D3DD1 /* DatabaseManager.swift */; };
 		7F010E8D246AEFF9008D3DD1 /* GramTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F010E8C246AEFF9008D3DD1 /* GramTable.swift */; };
 		7F010E8F246BE0A4008D3DD1 /* GramTableAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F010E8E246BE0A4008D3DD1 /* GramTableAdapter.swift */; };
-		7F010E96246C0127008D3DD1 /* dataset_default_1.csv in Resources */ = {isa = PBXBuildFile; fileRef = 7F010E92246C0127008D3DD1 /* dataset_default_1.csv */; };
-		7F010E97246C0127008D3DD1 /* dataset_default_4.csv in Resources */ = {isa = PBXBuildFile; fileRef = 7F010E93246C0127008D3DD1 /* dataset_default_4.csv */; };
-		7F010E98246C0127008D3DD1 /* dataset_default_2.csv in Resources */ = {isa = PBXBuildFile; fileRef = 7F010E94246C0127008D3DD1 /* dataset_default_2.csv */; };
-		7F010E99246C0127008D3DD1 /* dataset_default_3.csv in Resources */ = {isa = PBXBuildFile; fileRef = 7F010E95246C0127008D3DD1 /* dataset_default_3.csv */; };
 		7F010E9F246C0FDD008D3DD1 /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F010E9E246C0FDD008D3DD1 /* AppManager.swift */; };
 		7F010EA2246C1BF5008D3DD1 /* LoadDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F010EA1246C1BF5008D3DD1 /* LoadDataViewController.swift */; };
 		7F010EA4246C1D13008D3DD1 /* Gram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F010EA3246C1D13008D3DD1 /* Gram.swift */; };
@@ -31,6 +27,31 @@
 		7FA95D99246D305A002E366A /* SuggestionLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA95D98246D305A002E366A /* SuggestionLabel.swift */; };
 		7FA95D9C246D6D19002E366A /* SoundURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA95D9B246D6D19002E366A /* SoundURL.swift */; };
 		7FA95D9F246D7609002E366A /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA95D9E246D7609002E366A /* ChatTableViewCell.swift */; };
+		7FA95E91246D8C98002E366A /* kam.csv in Resources */ = {isa = PBXBuildFile; fileRef = 7FA95E90246D8C98002E366A /* kam.csv */; };
+		7FA95E93246D94C7002E366A /* ModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA95E92246D94C7002E366A /* ModeViewController.swift */; };
+		7FA95E95246D9902002E366A /* CrazyMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA95E94246D9902002E366A /* CrazyMode.swift */; };
+		7FA95E99246DF622002E366A /* Kamelott.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA95E98246DF622002E366A /* Kamelott.swift */; };
+		7FA961C1246E002D002E366A /* bucher3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7FA961C0246E002D002E366A /* bucher3.mp3 */; };
+		7FA961C3246E0050002E366A /* cest_honteux.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7FA961C2246E0050002E366A /* cest_honteux.mp3 */; };
+		7FA961C5246E0060002E366A /* cest_pas_faux2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7FA961C4246E0060002E366A /* cest_pas_faux2.mp3 */; };
+		7FA961C7246E006B002E366A /* cuillere_2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7FA961C6246E006B002E366A /* cuillere_2.mp3 */; };
+		7FA961C9246E007A002E366A /* et_vous_bande_de_cons.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7FA961C8246E007A002E366A /* et_vous_bande_de_cons.mp3 */; };
+		7FA961CB246E0090002E366A /* boule-de-feu-boule-de-feu.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7FA961CA246E0090002E366A /* boule-de-feu-boule-de-feu.mp3 */; };
+		7FA961CD246E009C002E366A /* ca_me_fait_gerber.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7FA961CC246E009C002E366A /* ca_me_fait_gerber.mp3 */; };
+		7FA961CF246E00AE002E366A /* casuffit.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7FA961CE246E00AE002E366A /* casuffit.mp3 */; };
+		7FA961D1246E00BA002E366A /* comment.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7FA961D0246E00BA002E366A /* comment.mp3 */; };
+		7FA961D3246E00C8002E366A /* et_puis_quoi_encore.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7FA961D2246E00C7002E366A /* et_puis_quoi_encore.mp3 */; };
+		7FA961D5246E00DA002E366A /* fumier.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7FA961D4246E00DA002E366A /* fumier.mp3 */; };
+		7FA961D7246E00E2002E366A /* meteo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7FA961D6246E00E2002E366A /* meteo.mp3 */; };
+		7FA961D9246E00EA002E366A /* ni_vu_ni_connu.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7FA961D8246E00EA002E366A /* ni_vu_ni_connu.mp3 */; };
+		7FA961DB246E00F5002E366A /* on_en_a_gros.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7FA961DA246E00F5002E366A /* on_en_a_gros.mp3 */; };
+		7FA961DD246E0101002E366A /* tres_bien.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7FA961DC246E0101002E366A /* tres_bien.mp3 */; };
+		7FA961DF246E010D002E366A /* ya_pas_de_mal.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7FA961DE246E010D002E366A /* ya_pas_de_mal.mp3 */; };
+		7FA961ED246E85C3002E366A /* a_la_volette1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7FA961EC246E85C3002E366A /* a_la_volette1.mp3 */; };
+		7FA961FA246E86BD002E366A /* dataset_default_1.csv in Resources */ = {isa = PBXBuildFile; fileRef = 7FA961F6246E86BD002E366A /* dataset_default_1.csv */; };
+		7FA961FB246E86BD002E366A /* dataset_default_2.csv in Resources */ = {isa = PBXBuildFile; fileRef = 7FA961F7246E86BD002E366A /* dataset_default_2.csv */; };
+		7FA961FC246E86BD002E366A /* dataset_default_3.csv in Resources */ = {isa = PBXBuildFile; fileRef = 7FA961F8246E86BD002E366A /* dataset_default_3.csv */; };
+		7FA961FD246E86BD002E366A /* dataset_default_4.csv in Resources */ = {isa = PBXBuildFile; fileRef = 7FA961F9246E86BD002E366A /* dataset_default_4.csv */; };
 		CF866EE872443370F4346F6F /* Pods_CrazyTextTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14ED018DE8CDAD09C18A6B0C /* Pods_CrazyTextTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,10 +83,6 @@
 		7F010E87246AE714008D3DD1 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		7F010E8C246AEFF9008D3DD1 /* GramTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GramTable.swift; sourceTree = "<group>"; };
 		7F010E8E246BE0A4008D3DD1 /* GramTableAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GramTableAdapter.swift; sourceTree = "<group>"; };
-		7F010E92246C0127008D3DD1 /* dataset_default_1.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dataset_default_1.csv; sourceTree = "<group>"; };
-		7F010E93246C0127008D3DD1 /* dataset_default_4.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dataset_default_4.csv; sourceTree = "<group>"; };
-		7F010E94246C0127008D3DD1 /* dataset_default_2.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dataset_default_2.csv; sourceTree = "<group>"; };
-		7F010E95246C0127008D3DD1 /* dataset_default_3.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dataset_default_3.csv; sourceTree = "<group>"; };
 		7F010E9E246C0FDD008D3DD1 /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
 		7F010EA1246C1BF5008D3DD1 /* LoadDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadDataViewController.swift; sourceTree = "<group>"; };
 		7F010EA3246C1D13008D3DD1 /* Gram.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gram.swift; sourceTree = "<group>"; };
@@ -87,6 +104,31 @@
 		7FA95D98246D305A002E366A /* SuggestionLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionLabel.swift; sourceTree = "<group>"; };
 		7FA95D9B246D6D19002E366A /* SoundURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundURL.swift; sourceTree = "<group>"; };
 		7FA95D9E246D7609002E366A /* ChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
+		7FA95E90246D8C98002E366A /* kam.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = kam.csv; sourceTree = "<group>"; };
+		7FA95E92246D94C7002E366A /* ModeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeViewController.swift; sourceTree = "<group>"; };
+		7FA95E94246D9902002E366A /* CrazyMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrazyMode.swift; sourceTree = "<group>"; };
+		7FA95E98246DF622002E366A /* Kamelott.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kamelott.swift; sourceTree = "<group>"; };
+		7FA961C0246E002D002E366A /* bucher3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bucher3.mp3; sourceTree = "<group>"; };
+		7FA961C2246E0050002E366A /* cest_honteux.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = cest_honteux.mp3; sourceTree = "<group>"; };
+		7FA961C4246E0060002E366A /* cest_pas_faux2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = cest_pas_faux2.mp3; sourceTree = "<group>"; };
+		7FA961C6246E006B002E366A /* cuillere_2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = cuillere_2.mp3; sourceTree = "<group>"; };
+		7FA961C8246E007A002E366A /* et_vous_bande_de_cons.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = et_vous_bande_de_cons.mp3; sourceTree = "<group>"; };
+		7FA961CA246E0090002E366A /* boule-de-feu-boule-de-feu.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "boule-de-feu-boule-de-feu.mp3"; sourceTree = "<group>"; };
+		7FA961CC246E009C002E366A /* ca_me_fait_gerber.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ca_me_fait_gerber.mp3; sourceTree = "<group>"; };
+		7FA961CE246E00AE002E366A /* casuffit.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = casuffit.mp3; sourceTree = "<group>"; };
+		7FA961D0246E00BA002E366A /* comment.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = comment.mp3; sourceTree = "<group>"; };
+		7FA961D2246E00C7002E366A /* et_puis_quoi_encore.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = et_puis_quoi_encore.mp3; sourceTree = "<group>"; };
+		7FA961D4246E00DA002E366A /* fumier.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = fumier.mp3; sourceTree = "<group>"; };
+		7FA961D6246E00E2002E366A /* meteo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = meteo.mp3; sourceTree = "<group>"; };
+		7FA961D8246E00EA002E366A /* ni_vu_ni_connu.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ni_vu_ni_connu.mp3; sourceTree = "<group>"; };
+		7FA961DA246E00F5002E366A /* on_en_a_gros.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = on_en_a_gros.mp3; sourceTree = "<group>"; };
+		7FA961DC246E0101002E366A /* tres_bien.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = tres_bien.mp3; sourceTree = "<group>"; };
+		7FA961DE246E010D002E366A /* ya_pas_de_mal.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ya_pas_de_mal.mp3; sourceTree = "<group>"; };
+		7FA961EC246E85C3002E366A /* a_la_volette1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = a_la_volette1.mp3; sourceTree = "<group>"; };
+		7FA961F6246E86BD002E366A /* dataset_default_1.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = dataset_default_1.csv; path = ../../../../../../Desktop/datasetes/dataset_default_1.csv; sourceTree = "<group>"; };
+		7FA961F7246E86BD002E366A /* dataset_default_2.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = dataset_default_2.csv; path = ../../../../../../Desktop/datasetes/dataset_default_2.csv; sourceTree = "<group>"; };
+		7FA961F8246E86BD002E366A /* dataset_default_3.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = dataset_default_3.csv; path = ../../../../../../Desktop/datasetes/dataset_default_3.csv; sourceTree = "<group>"; };
+		7FA961F9246E86BD002E366A /* dataset_default_4.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = dataset_default_4.csv; path = ../../../../../../Desktop/datasetes/dataset_default_4.csv; sourceTree = "<group>"; };
 		A86517479720259FC81861CB /* Pods-CrazyTextTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrazyTextTests.release.xcconfig"; path = "Target Support Files/Pods-CrazyTextTests/Pods-CrazyTextTests.release.xcconfig"; sourceTree = "<group>"; };
 		D22DDCBF71181299180C446F /* Pods-CrazyText-CrazyTextUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrazyText-CrazyTextUITests.release.xcconfig"; path = "Target Support Files/Pods-CrazyText-CrazyTextUITests/Pods-CrazyText-CrazyTextUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -130,6 +172,7 @@
 		7F010E86246AE5A3008D3DD1 /* ressources */ = {
 			isa = PBXGroup;
 			children = (
+				7FA95DA0246D8B33002E366A /* kamelott */,
 				7F010E9A246C0F19008D3DD1 /* default */,
 			);
 			path = ressources;
@@ -141,6 +184,8 @@
 				7F010E8C246AEFF9008D3DD1 /* GramTable.swift */,
 				7F010E8E246BE0A4008D3DD1 /* GramTableAdapter.swift */,
 				7F010EA3246C1D13008D3DD1 /* Gram.swift */,
+				7FA95E94246D9902002E366A /* CrazyMode.swift */,
+				7FA95E98246DF622002E366A /* Kamelott.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -148,10 +193,10 @@
 		7F010E9A246C0F19008D3DD1 /* default */ = {
 			isa = PBXGroup;
 			children = (
-				7F010E92246C0127008D3DD1 /* dataset_default_1.csv */,
-				7F010E94246C0127008D3DD1 /* dataset_default_2.csv */,
-				7F010E95246C0127008D3DD1 /* dataset_default_3.csv */,
-				7F010E93246C0127008D3DD1 /* dataset_default_4.csv */,
+				7FA961F6246E86BD002E366A /* dataset_default_1.csv */,
+				7FA961F7246E86BD002E366A /* dataset_default_2.csv */,
+				7FA961F8246E86BD002E366A /* dataset_default_3.csv */,
+				7FA961F9246E86BD002E366A /* dataset_default_4.csv */,
 			);
 			path = default;
 			sourceTree = "<group>";
@@ -169,6 +214,7 @@
 			children = (
 				7F975ABE24695ADC0050C98B /* ViewController.swift */,
 				7F010EA1246C1BF5008D3DD1 /* LoadDataViewController.swift */,
+				7FA95E92246D94C7002E366A /* ModeViewController.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -249,6 +295,39 @@
 				7FA95D9E246D7609002E366A /* ChatTableViewCell.swift */,
 			);
 			path = cells;
+			sourceTree = "<group>";
+		};
+		7FA95DA0246D8B33002E366A /* kamelott */ = {
+			isa = PBXGroup;
+			children = (
+				7FA961BF246DFFC7002E366A /* sounds */,
+				7FA95E90246D8C98002E366A /* kam.csv */,
+			);
+			path = kamelott;
+			sourceTree = "<group>";
+		};
+		7FA961BF246DFFC7002E366A /* sounds */ = {
+			isa = PBXGroup;
+			children = (
+				7FA961EC246E85C3002E366A /* a_la_volette1.mp3 */,
+				7FA961CC246E009C002E366A /* ca_me_fait_gerber.mp3 */,
+				7FA961CA246E0090002E366A /* boule-de-feu-boule-de-feu.mp3 */,
+				7FA961C8246E007A002E366A /* et_vous_bande_de_cons.mp3 */,
+				7FA961C6246E006B002E366A /* cuillere_2.mp3 */,
+				7FA961C4246E0060002E366A /* cest_pas_faux2.mp3 */,
+				7FA961C2246E0050002E366A /* cest_honteux.mp3 */,
+				7FA961C0246E002D002E366A /* bucher3.mp3 */,
+				7FA961CE246E00AE002E366A /* casuffit.mp3 */,
+				7FA961D0246E00BA002E366A /* comment.mp3 */,
+				7FA961D2246E00C7002E366A /* et_puis_quoi_encore.mp3 */,
+				7FA961D4246E00DA002E366A /* fumier.mp3 */,
+				7FA961D6246E00E2002E366A /* meteo.mp3 */,
+				7FA961D8246E00EA002E366A /* ni_vu_ni_connu.mp3 */,
+				7FA961DA246E00F5002E366A /* on_en_a_gros.mp3 */,
+				7FA961DC246E0101002E366A /* tres_bien.mp3 */,
+				7FA961DE246E010D002E366A /* ya_pas_de_mal.mp3 */,
+			);
+			path = sounds;
 			sourceTree = "<group>";
 		};
 		B1E954BD8FC65D8ED8A1A565 /* Pods */ = {
@@ -383,13 +462,31 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7F010E98246C0127008D3DD1 /* dataset_default_2.csv in Resources */,
+				7FA961C3246E0050002E366A /* cest_honteux.mp3 in Resources */,
+				7FA961D9246E00EA002E366A /* ni_vu_ni_connu.mp3 in Resources */,
 				7F975AC724695ADE0050C98B /* LaunchScreen.storyboard in Resources */,
-				7F010E96246C0127008D3DD1 /* dataset_default_1.csv in Resources */,
-				7F010E99246C0127008D3DD1 /* dataset_default_3.csv in Resources */,
+				7FA961FC246E86BD002E366A /* dataset_default_3.csv in Resources */,
+				7FA961FA246E86BD002E366A /* dataset_default_1.csv in Resources */,
+				7FA961C5246E0060002E366A /* cest_pas_faux2.mp3 in Resources */,
+				7FA961DF246E010D002E366A /* ya_pas_de_mal.mp3 in Resources */,
+				7FA961DD246E0101002E366A /* tres_bien.mp3 in Resources */,
+				7FA961D3246E00C8002E366A /* et_puis_quoi_encore.mp3 in Resources */,
+				7FA961C7246E006B002E366A /* cuillere_2.mp3 in Resources */,
 				7F975AC424695ADE0050C98B /* Assets.xcassets in Resources */,
+				7FA961D1246E00BA002E366A /* comment.mp3 in Resources */,
+				7FA961D5246E00DA002E366A /* fumier.mp3 in Resources */,
+				7FA961CD246E009C002E366A /* ca_me_fait_gerber.mp3 in Resources */,
 				7F975AC224695ADC0050C98B /* Main.storyboard in Resources */,
-				7F010E97246C0127008D3DD1 /* dataset_default_4.csv in Resources */,
+				7FA961C9246E007A002E366A /* et_vous_bande_de_cons.mp3 in Resources */,
+				7FA961CB246E0090002E366A /* boule-de-feu-boule-de-feu.mp3 in Resources */,
+				7FA95E91246D8C98002E366A /* kam.csv in Resources */,
+				7FA961C1246E002D002E366A /* bucher3.mp3 in Resources */,
+				7FA961D7246E00E2002E366A /* meteo.mp3 in Resources */,
+				7FA961ED246E85C3002E366A /* a_la_volette1.mp3 in Resources */,
+				7FA961FB246E86BD002E366A /* dataset_default_2.csv in Resources */,
+				7FA961CF246E00AE002E366A /* casuffit.mp3 in Resources */,
+				7FA961DB246E00F5002E366A /* on_en_a_gros.mp3 in Resources */,
+				7FA961FD246E86BD002E366A /* dataset_default_4.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -525,9 +622,12 @@
 				7FA95D99246D305A002E366A /* SuggestionLabel.swift in Sources */,
 				7F975AEC246966230050C98B /* SuggestionView.swift in Sources */,
 				7F010EA4246C1D13008D3DD1 /* Gram.swift in Sources */,
+				7FA95E95246D9902002E366A /* CrazyMode.swift in Sources */,
 				7F975ABD24695ADC0050C98B /* SceneDelegate.swift in Sources */,
+				7FA95E99246DF622002E366A /* Kamelott.swift in Sources */,
 				7FA95D9C246D6D19002E366A /* SoundURL.swift in Sources */,
 				7F010EA2246C1BF5008D3DD1 /* LoadDataViewController.swift in Sources */,
+				7FA95E93246D94C7002E366A /* ModeViewController.swift in Sources */,
 				7FA95D9F246D7609002E366A /* ChatTableViewCell.swift in Sources */,
 				7F010E9F246C0FDD008D3DD1 /* AppManager.swift in Sources */,
 			);

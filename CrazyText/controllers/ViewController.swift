@@ -13,8 +13,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var textfield: UITextField!
     private var suggestView: SuggestionView?
     @IBOutlet weak var chat: UITableView!
+    @IBOutlet weak var textFieldBottomConstraint: NSLayoutConstraint!
     
     private var messages = [String]()
+    private var modeController: ModeViewController!
+    private var mode: CrazyMode?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,11 +29,21 @@ class ViewController: UIViewController {
         chat.backgroundColor = UIColor(white: 0.95, alpha: 1)
         chat.register(ChatTableViewCell.self, forCellReuseIdentifier: "chat")
         
+        navigationItem.title = "MESSAGES"
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationBar.addGestureRecognizer(UITapGestureRecognizer.init(target: self, action: #selector(onModeActivated)))
+        
+        modeController = storyboard?.instantiateViewController(identifier: "\(ModeViewController.self)")
+        modeController.delegate = self
         
         NotificationCenter.default.addObserver(self, selector: #selector(ViewController.keyboardWillShow(notification:)), name: UIResponder.keyboardDidShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(ViewController.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
         textfield.addTarget(self, action: #selector(ViewController.textFieldDidChange(_:)), for: .editingChanged)
 
+    }
+    
+    @objc func onModeActivated() {
+        present(modeController, animated: true, completion: nil)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -43,7 +56,7 @@ class ViewController: UIViewController {
 
     private func initSuggestView(keyboardHeight: CGFloat) {
         let viewSize: CGFloat = 40
-        let y = self.view.frame.height - viewSize - textfield.frame.height
+        let y = self.view.frame.height - textFieldBottomConstraint.constant - viewSize - textfield.frame.height
         self.suggestView = SuggestionView(frame: .init(x: 0, y: y, width: self.view.frame.width, height: viewSize))
         suggestView?.backgroundColor = .white
         self.suggestView?.delegate = self
@@ -80,7 +93,7 @@ extension ViewController: UITextFieldDelegate {
     @objc func keyboardWillShow(notification: Notification) {
         if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
             if self.view.frame.origin.y == 0 {
-                self.view.frame.origin.y -= keyboardSize.height
+                self.textFieldBottomConstraint.constant = keyboardSize.height
             }
             initSuggestView(keyboardHeight: keyboardSize.height)
             self.view.addSubview(suggestView!)
@@ -88,11 +101,11 @@ extension ViewController: UITextFieldDelegate {
     }
     
     @objc func keyboardWillHide(notification: Notification) {
-        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+        if ((notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue) != nil {
             self.suggestView = nil
             self.view.subviews.first { $0.tag == 1 }?.removeFromSuperview()
-            if self.view.frame.origin.y != 0 {
-                self.view.frame.origin.y += keyboardSize.height
+            if self.textFieldBottomConstraint.constant != 0 {
+                self.textFieldBottomConstraint.constant = 0
             }
         }
     }
@@ -127,7 +140,9 @@ extension ViewController: UITextFieldDelegate {
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        messages.append(textfield.text ?? "")
+        let text = textField.text ?? ""
+        mode?.doAction(text: text)
+        messages.append(text)
         chat.reloadData()
         textfield.resignFirstResponder()
         textField.text = ""
@@ -175,5 +190,20 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         cell.set(message: messages[indexPath.row], incoming: indexPath.row % 2 == 0)
         
         return cell
+    }
+}
+
+extension ViewController: ModeViewControllerDelegate {
+    func modeViewController(_ modeViewController: ModeViewController, didSelect mode: ModeViewController.Mode) {
+        switch mode {
+        case .kamelott:
+            self.mode = KamelottCrazyMode()
+            let imageView = UIImageView(image: .init(imageLiteralResourceName: "kamelott"))
+            imageView.contentMode = .scaleAspectFit
+            self.chat.backgroundView = imageView
+        case .none:
+            self.mode = nil
+            self.chat.backgroundView = UIView()
+        }
     }
 }
